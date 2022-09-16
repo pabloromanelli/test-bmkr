@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p>test iframe</p>
+<p id='cont'>test iframe</p>
 <script>
 window.addEventListener("message", (event) => {
   console.log(`msg on iframe: ${JSON.stringify(event)}`);
+  var a = window.document.getElementById('cont');
+  a.textContent = a.textContent+JSON.stringify(event);
 }, false);
 </script> 
 
