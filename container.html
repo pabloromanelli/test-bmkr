@@ -4,8 +4,12 @@
   <p>container</p>
   <iframe id="superframe" src="https://pabloromanelli.github.io/test-bmkr/testiframe.html"></iframe>
 <script>
-  console.log('sending something to iframe');
-  document.getElementById('superframe').contentWindow.postMessage('something');
+  console.log('waiting 3 sec to send');
+  setTimeout(() => {
+      console.log("sending something to iframe");
+      document.getElementById('superframe').contentWindow.postMessage('something');
+  }, 3000)
+
 </script> 
 
 </body>
