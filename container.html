@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>container</p>
+  <iframe id="superframe" src="https://pabloromanelli.github.io/test-bmkr/testiframe.html"></iframe>
+<script>
+  console.log('sending something to iframe');
+  document.getElementById('superframe').contentWindow.postMessage('something');
+</script> 
+
+</body>
+</html>
