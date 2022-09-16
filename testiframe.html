@@ -3,6 +3,7 @@
 <body>
 <p id='cont'>test iframe</p>
 <script>
+  console.log('estoy en el iframe');
 window.addEventListener("message", (event) => {
   console.log(`msg on iframe: ${JSON.stringify(event)}`);
   var a = window.document.getElementById('cont');
