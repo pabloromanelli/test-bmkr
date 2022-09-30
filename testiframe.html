@@ -4,10 +4,10 @@
 <p id='cont'>test iframe</p>
 <script>
   console.log('estoy en el iframe');
-window.addEventListener("message", (event) => {
-  console.log(`msg on iframe: ${JSON.stringify(event)}`);
+window.addEventListener("message", ({data}) => {
+  console.log(`msg on iframe: ${JSON.stringify(data)}`);
   var a = window.document.getElementById('cont');
-  a.textContent = a.textContent+JSON.stringify(event);
+  a.textContent = a.textContent+JSON.stringify(data);
 }, false);
 </script> 
 
